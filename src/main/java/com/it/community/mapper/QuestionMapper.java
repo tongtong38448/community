@@ -5,7 +5,6 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -19,4 +18,13 @@ public interface QuestionMapper {
 
     @Select("select count(1) from question")
     Integer count();
+
+    @Select("select * from question where creator=#{userId} limit #{offset},#{size}")
+    List<Question> list(@Param("userId")Integer userId, @Param("offset") Integer offset,@Param("size") Integer size);
+
+    @Select("select count(1) from question where creator = #{userId}")
+    Integer countByUserId(@Param("userId") Integer userId);
+
+    @Select("select * from question where id=#{id}")
+    Question getById(@Param("id")Integer id);
 }

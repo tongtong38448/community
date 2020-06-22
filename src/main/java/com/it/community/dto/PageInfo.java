@@ -17,20 +17,9 @@ public class PageInfo {
         private Integer totalPage;//总页数
 
 
-    public void setPageInfo(Integer totalCount, Integer page, Integer size) {
-        if(totalCount%size==0){
-            totalPage=totalCount/size;
-        }else {
-            totalPage=totalCount/size+1;
-        }
+    public void setPageInfo(Integer totalPage, Integer page) {
 
-        if(page<1){
-            page=1;
-        }
-        if(page>totalPage){
-            page=totalPage;
-        }
-
+        this.totalPage=totalPage;
         this.page=page;
         pages.add(page);
         for (int i = 1; i <= 3; i++) {

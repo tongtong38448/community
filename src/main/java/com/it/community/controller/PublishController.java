@@ -18,8 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 public class PublishController {
     @Autowired
     QuestionMapper questionMapper;
-    @Autowired
-    UserMapper userMapper;
+
     @GetMapping("/publish")
     public String publish(){
         return "publish";
