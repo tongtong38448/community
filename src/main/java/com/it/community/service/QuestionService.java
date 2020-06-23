@@ -102,6 +102,8 @@ public class QuestionService {
         QuestionDTO questionDTO = new QuestionDTO();
         //question取出来 给questionDTO set上
         BeanUtils.copyProperties(question,questionDTO);
+        User user = userMapper.findById(question.getCreator());
+        questionDTO.setUser(user);
         return questionDTO;
     }
 }
