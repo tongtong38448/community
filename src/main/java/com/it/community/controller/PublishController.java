@@ -1,7 +1,6 @@
 package com.it.community.controller;
 
 import com.it.community.dto.QuestionDTO;
-import com.it.community.mapper.QuestionMapper;
 import com.it.community.model.Question;
 import com.it.community.model.User;
 import com.it.community.service.QuestionService;
@@ -21,14 +20,13 @@ public class PublishController {
     QuestionService questionService;
 
     @GetMapping("/publish/{id}")
-    public String edit(@PathVariable(name = "id") Integer id,
+    public String edit(@PathVariable(name = "id") Long id,
                        Model model){
         QuestionDTO question = questionService.getById(id);
         model.addAttribute("title",question.getTitle());
         model.addAttribute("description",question.getDescription());
         model.addAttribute("tag",question.getTag());
         model.addAttribute("id",question.getId());
-        System.out.println("测试"+question.getDescription());
         return "publish";
     }
 
@@ -39,10 +37,10 @@ public class PublishController {
 
     @PostMapping("/publish")
     public String doPublish(
-            @RequestParam("title")String title,
-            @RequestParam("description")String description,
-            @RequestParam("tag")String tag,
-            @RequestParam("id") Integer id,
+            @RequestParam(value = "title",required = false)String title,
+            @RequestParam(value ="description",required = false)String description,
+            @RequestParam(value ="tag",required = false)String tag,
+            @RequestParam(value ="id",required = false) Long id,
             HttpServletRequest request,
             Model model
     ){
