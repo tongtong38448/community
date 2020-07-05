@@ -64,7 +64,7 @@ public class QuestionService {
 			questionDTO.setUser(user);
 			questionDTOList.add(questionDTO);
 		}
-		pageInfo.setQuestions(questionDTOList);
+		pageInfo.setData(questionDTOList);
 		return pageInfo;
 	}
 
@@ -94,7 +94,6 @@ public class QuestionService {
 		QuestionExample example = new QuestionExample();
 		example.createCriteria().andCreatorEqualTo(userId);
 		List<Question> questions = questionMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
-
 		List<QuestionDTO> questionDTOList = new ArrayList<>();
 		for (Question question :
 				questions) {
@@ -105,7 +104,7 @@ public class QuestionService {
 			questionDTO.setUser(user);
 			questionDTOList.add(questionDTO);
 		}
-		pageInfo.setQuestions(questionDTOList);
+		pageInfo.setData(questionDTOList);
 		return pageInfo;
 	}
 

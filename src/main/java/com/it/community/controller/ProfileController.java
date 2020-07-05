@@ -1,7 +1,6 @@
 package com.it.community.controller;
 
 import com.it.community.dto.PageInfo;
-import com.it.community.mapper.UserMapper;
 import com.it.community.model.User;
 import com.it.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +19,8 @@ public class ProfileController {
 
     @Autowired
     private QuestionService questionService;
+    @Autowired
+    private NotificationService notificationService;
 
     @GetMapping("/profile/{action}")
     public String profile(@PathVariable(name = "action") String action,
@@ -36,12 +37,15 @@ public class ProfileController {
 
             model.addAttribute("section", "questions");
             model.addAttribute("sectionName", "我的提问");
+            PageInfo pageInfo = questionService.list(user.getId(), page, size);
+            model.addAttribute("pageInfo", pageInfo);
         } else if ("replies".equals(action)) {
+            PageInfo pageInfo = notificationService.list(user.getId(), page, size);
+            model.addAttribute("pageInfo", pageInfo);
             model.addAttribute("section", "replies");
             model.addAttribute("sectionName", "最新回复");
         }
-        PageInfo pageInfo = questionService.list(user.getId(), page, size);
-        model.addAttribute("pageInfo", pageInfo);
+
         return "profile";
     }
 }
