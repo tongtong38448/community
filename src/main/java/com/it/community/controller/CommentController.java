@@ -20,37 +20,38 @@ import java.util.List;
 @Controller
 public class CommentController {
 
-    @Autowired
-    private CommentService commentService;
+	@Autowired
+	private CommentService commentService;
 
-    @ResponseBody
-    @RequestMapping( value = "/comment" ,method = RequestMethod.POST)
-    public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
-                       HttpServletRequest request){
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
-        if (user==null){
-            return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
-        }
-        if(commentCreateDTO==null|| StringUtils.isBlank(commentCreateDTO.getContent())){
-            return ResultDTO.errorOf(CustomizeErrorCode.COMMENT_IS_EMPTY);
-        }
-        Comment comment = new Comment();
-        comment.setContent(commentCreateDTO.getContent());
-        comment.setParentId(commentCreateDTO.getParentId());
-        comment.setType(commentCreateDTO.getType());
-        comment.setGmtCreate(System.currentTimeMillis());
-        comment.setGmtModified(comment.getGmtCreate());
-        comment.setLikeCount(0L);
-        comment.setCommentator(user.getId());
-        commentService.insert(comment);
-        return ResultDTO.okOf();
-    }
-    @ResponseBody
-    @RequestMapping( value = "/comment/{id}" ,method = RequestMethod.GET)
-    public ResultDTO<List<CommentDTO>> comments(@PathVariable(name = "id")Long id){
-        List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
-        return ResultDTO.okOf(commentDTOS);
-    }
+	@ResponseBody
+	@RequestMapping(value = "/comment", method = RequestMethod.POST)
+	public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
+	                   HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
+		if (user == null) {
+			return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
+		}
+		if (commentCreateDTO == null || StringUtils.isBlank(commentCreateDTO.getContent())) {
+			return ResultDTO.errorOf(CustomizeErrorCode.COMMENT_IS_EMPTY);
+		}
+		Comment comment = new Comment();
+		comment.setContent(commentCreateDTO.getContent());
+		comment.setParentId(commentCreateDTO.getParentId());
+		comment.setType(commentCreateDTO.getType());
+		comment.setGmtCreate(System.currentTimeMillis());
+		comment.setGmtModified(comment.getGmtCreate());
+		comment.setLikeCount(0L);
+		comment.setCommentator(user.getId());
+		commentService.insert(comment, user);
+		return ResultDTO.okOf();
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
+	public ResultDTO<List<CommentDTO>> comments(@PathVariable(name = "id") Long id) {
+		List<CommentDTO> commentDTOS = commentService.listByTargetId(id, CommentTypeEnum.COMMENT);
+		return ResultDTO.okOf(commentDTOS);
+	}
 
 }

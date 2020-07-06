@@ -2,6 +2,7 @@ package com.it.community.controller;
 
 import com.it.community.dto.PageInfo;
 import com.it.community.model.User;
+import com.it.community.service.NotificationService;
 import com.it.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,6 +42,7 @@ public class ProfileController {
             model.addAttribute("pageInfo", pageInfo);
         } else if ("replies".equals(action)) {
             PageInfo pageInfo = notificationService.list(user.getId(), page, size);
+            Long unreadCount = notificationService.unreadCount(user.getId());
             model.addAttribute("pageInfo", pageInfo);
             model.addAttribute("section", "replies");
             model.addAttribute("sectionName", "最新回复");
