@@ -21,7 +21,6 @@ import java.util.UUID;
 public class AuthorizeController {
     @Autowired
     private GiteeProvider giteeProvider;
-
     @Value("${github.client.id}")
     private String clientId;
     @Value("${github.client.secret}")

@@ -42,7 +42,6 @@ public class ProfileController {
             model.addAttribute("pageInfo", pageInfo);
         } else if ("replies".equals(action)) {
             PageInfo pageInfo = notificationService.list(user.getId(), page, size);
-            Long unreadCount = notificationService.unreadCount(user.getId());
             model.addAttribute("pageInfo", pageInfo);
             model.addAttribute("section", "replies");
             model.addAttribute("sectionName", "最新回复");

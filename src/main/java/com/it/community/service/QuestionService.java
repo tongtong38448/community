@@ -2,6 +2,7 @@ package com.it.community.service;
 
 import com.it.community.dto.PageInfo;
 import com.it.community.dto.QuestionDTO;
+import com.it.community.dto.QuestionQueryDTO;
 import com.it.community.excepion.CustomizeErrorCode;
 import com.it.community.excepion.CustomizeException;
 import com.it.community.mapper.QuestionExtMapper;
@@ -17,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,12 +31,16 @@ public class QuestionService {
 	@Autowired
 	private QuestionExtMapper questionExtMapper;
 
-	public PageInfo findAll(Integer page, Integer size) {
+	public PageInfo findAll(String search,Integer page, Integer size) {
+		if(StringUtils.isNotBlank(search)){
+			String[] split = StringUtils.split(search, " ");
+			search = Arrays.stream(split).collect(Collectors.joining("|"));
+		}
 		PageInfo pageInfo = new PageInfo();
-
-
 		Integer totalPage;//总页数
-		Integer totalCount = (int) questionMapper.countByExample(new QuestionExample());
+		QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+		questionQueryDTO.setSearch(search);
+		Integer totalCount = questionExtMapper.countBySearch(questionQueryDTO);
 		if (totalCount % size == 0) {
 			totalPage = totalCount / size;
 		} else {
@@ -50,9 +56,9 @@ public class QuestionService {
 		pageInfo.setPageInfo(totalPage, page);
 
 		Integer offset = size * (page - 1);
-		QuestionExample questionExample = new QuestionExample();
-		questionExample.setOrderByClause("gmt_create desc");
-		List<Question> questions = questionMapper.selectByExampleWithRowbounds(questionExample, new RowBounds(offset, size));
+		questionQueryDTO.setSize(size);
+		questionQueryDTO.setPage(offset);
+		List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
 		List<QuestionDTO> questionDTOList = new ArrayList<>();
 
 		for (Question question :
