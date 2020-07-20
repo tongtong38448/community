@@ -58,7 +58,7 @@ public class QuestionService {
 		Integer offset = size * (page - 1);
 		questionQueryDTO.setSize(size);
 		questionQueryDTO.setPage(offset);
-		try {
+
 			List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
 		List<QuestionDTO> questionDTOList = new ArrayList<>();
 
@@ -73,11 +73,6 @@ public class QuestionService {
 			questionDTOList.add(questionDTO);
 		}
 		pageInfo.setData(questionDTOList);
-
-		}catch (Exception e){
-			throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
-		}
-
 		return pageInfo;
 	}
 
