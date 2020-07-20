@@ -28,7 +28,7 @@
     select * from Question where id != #{id} and tag regexp #{tag}
   </select>
     <select id="countBySearch" parameterType="com.it.community.dto.QuestionQueryDTO" resultType="java.lang.Integer">
-        select count(*) from Question
+        select count(*) from question
         <where>
             <if test="search!=null and search != ''">
                 and title regexp #{search}
@@ -36,7 +36,7 @@
         </where>
     </select>
     <select id="selectBySearch" parameterType="com.it.community.dto.QuestionQueryDTO" resultMap="BaseResultMap">
-        select * from Question
+        select * from question
         <where>
             <if test="search != null and search != ''">
                 and title regexp #{search}

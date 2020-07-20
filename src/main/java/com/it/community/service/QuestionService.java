@@ -59,20 +59,26 @@ public class QuestionService {
 		questionQueryDTO.setSize(size);
 		questionQueryDTO.setPage(offset);
 
+		try {
 			List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
-		List<QuestionDTO> questionDTOList = new ArrayList<>();
+			List<QuestionDTO> questionDTOList = new ArrayList<>();
 
-		for (Question question :
-				questions) {
+			for (Question question :
+					questions) {
 
-			User user = userMapper.selectByPrimaryKey(question.getCreator());
-			QuestionDTO questionDTO = new QuestionDTO();
-			//question取出来 给questionDTO set上
-			BeanUtils.copyProperties(question, questionDTO);
-			questionDTO.setUser(user);
-			questionDTOList.add(questionDTO);
+				User user = userMapper.selectByPrimaryKey(question.getCreator());
+				QuestionDTO questionDTO = new QuestionDTO();
+				//question取出来 给questionDTO set上
+				BeanUtils.copyProperties(question, questionDTO);
+				questionDTO.setUser(user);
+				questionDTOList.add(questionDTO);
+			}
+			pageInfo.setData(questionDTOList);
+
+		}catch (Exception e){
+			throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
 		}
-		pageInfo.setData(questionDTOList);
+
 		return pageInfo;
 	}
 

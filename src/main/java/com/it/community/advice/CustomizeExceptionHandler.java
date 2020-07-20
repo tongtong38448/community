@@ -46,6 +46,7 @@ public class CustomizeExceptionHandler {
                 model.addAttribute("message", e.getMessage());
             } else {
                 model.addAttribute("message", "服务器异常");
+                System.out.println(e.getMessage());
             }
             return new ModelAndView("error");
         }
