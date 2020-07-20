@@ -58,11 +58,13 @@ public class QuestionService {
 		Integer offset = size * (page - 1);
 		questionQueryDTO.setSize(size);
 		questionQueryDTO.setPage(offset);
-		List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
+		try {
+			List<Question> questions = questionExtMapper.selectBySearch(questionQueryDTO);
 		List<QuestionDTO> questionDTOList = new ArrayList<>();
 
 		for (Question question :
 				questions) {
+
 			User user = userMapper.selectByPrimaryKey(question.getCreator());
 			QuestionDTO questionDTO = new QuestionDTO();
 			//question取出来 给questionDTO set上
@@ -71,6 +73,11 @@ public class QuestionService {
 			questionDTOList.add(questionDTO);
 		}
 		pageInfo.setData(questionDTOList);
+
+		}catch (Exception e){
+			throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+		}
+
 		return pageInfo;
 	}
 
