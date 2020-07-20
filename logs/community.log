@@ -358,3 +358,135 @@
 2020-07-20 10:51:26.541  INFO 8832 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
 2020-07-20 10:51:27.276  INFO 8832 --- [main] c.i.community.CommunityApplicationTests  : Started CommunityApplicationTests in 6.158 seconds (JVM running for 8.266)
 2020-07-20 10:51:28.118  INFO 8832 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:01:24.635  INFO 19080 --- [restartedMain] com.it.community.CommunityApplication    : Starting CommunityApplication on tong with PID 19080 (D:\IDEA_SPACE\community\target\classes started by tong in D:\IDEA_SPACE\community)
+2020-07-20 13:01:24.641  INFO 19080 --- [restartedMain] com.it.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2020-07-20 13:01:24.756  INFO 19080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 13:01:24.757  INFO 19080 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 13:01:27.479  INFO 19080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-07-20 13:01:27.498  INFO 19080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 13:01:27.498  INFO 19080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 13:01:27.644  INFO 19080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 13:01:27.645  INFO 19080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2888 ms
+2020-07-20 13:01:28.500  INFO 19080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:01:28.583  INFO 19080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 13:01:29.287  INFO 19080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 13:01:29.406  INFO 19080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-07-20 13:01:29.442  INFO 19080 --- [restartedMain] com.it.community.CommunityApplication    : Started CommunityApplication in 5.421 seconds (JVM running for 7.161)
+2020-07-20 13:01:55.285  INFO 19080 --- [Thread-181] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:01:55.516  INFO 19080 --- [restartedMain] com.it.community.CommunityApplication    : Starting CommunityApplication on tong with PID 19080 (D:\IDEA_SPACE\community\target\classes started by tong in D:\IDEA_SPACE\community)
+2020-07-20 13:01:55.516  INFO 19080 --- [restartedMain] com.it.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2020-07-20 13:01:56.168  INFO 19080 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-07-20 13:01:56.168  INFO 19080 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 13:01:56.169  INFO 19080 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 13:01:56.251  INFO 19080 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 13:01:56.252  INFO 19080 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 731 ms
+2020-07-20 13:01:56.741  INFO 19080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:01:56.777  INFO 19080 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 13:01:57.178  INFO 19080 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 13:01:57.197  WARN 19080 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 80 is already in use
+2020-07-20 13:01:57.198  INFO 19080 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:01:57.200  INFO 19080 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-20 13:01:57.224  INFO 19080 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-20 13:01:57.241 ERROR 19080 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 80 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 80 or configure this application to listen on another port.
+
+2020-07-20 13:10:09.498  INFO 25548 --- [restartedMain] com.it.community.CommunityApplication    : Starting CommunityApplication on tong with PID 25548 (D:\IDEA_SPACE\community\target\classes started by tong in D:\IDEA_SPACE\community)
+2020-07-20 13:10:09.507  INFO 25548 --- [restartedMain] com.it.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2020-07-20 13:10:09.766  INFO 25548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 13:10:09.767  INFO 25548 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 13:10:12.695  INFO 25548 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-07-20 13:10:12.716  INFO 25548 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 13:10:12.716  INFO 25548 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 13:10:12.952  INFO 25548 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 13:10:12.953  INFO 25548 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3186 ms
+2020-07-20 13:10:14.106  INFO 25548 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:10:14.233  INFO 25548 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 13:10:14.825  INFO 25548 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 13:10:14.866  WARN 25548 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 80 is already in use
+2020-07-20 13:10:14.871  INFO 25548 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:10:14.877  INFO 25548 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-07-20 13:10:14.898  INFO 25548 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-07-20 13:10:14.907 ERROR 25548 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 80 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 80 or configure this application to listen on another port.
+
+2020-07-20 13:10:36.708  INFO 24000 --- [restartedMain] com.it.community.CommunityApplication    : Starting CommunityApplication on tong with PID 24000 (D:\IDEA_SPACE\community\target\classes started by tong in D:\IDEA_SPACE\community)
+2020-07-20 13:10:36.713  INFO 24000 --- [restartedMain] com.it.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2020-07-20 13:10:36.884  INFO 24000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 13:10:36.888  INFO 24000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 13:10:39.433  INFO 24000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 13:10:39.447  INFO 24000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 13:10:39.448  INFO 24000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 13:10:39.611  INFO 24000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 13:10:39.612  INFO 24000 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2723 ms
+2020-07-20 13:10:41.134  INFO 24000 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:10:41.244  INFO 24000 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 13:10:41.842  INFO 24000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 13:10:41.895  INFO 24000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 13:10:41.912  INFO 24000 --- [restartedMain] com.it.community.CommunityApplication    : Started CommunityApplication in 6.099 seconds (JVM running for 7.984)
+2020-07-20 13:10:48.716  INFO 24000 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-20 13:10:48.717  INFO 24000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-20 13:10:48.728  INFO 24000 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-07-20 13:10:48.851  INFO 24000 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-20 13:10:49.087  INFO 24000 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-07-20 13:10:49.092  INFO 24000 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-20 13:10:49.102 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.QuestionExtMapper.countBySearch  : ==>  Preparing: select count(*) from Question
+2020-07-20 13:10:49.122 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.QuestionExtMapper.countBySearch  : ==> Parameters: 
+2020-07-20 13:10:49.143 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.QuestionExtMapper.countBySearch  : <==      Total: 1
+2020-07-20 13:10:49.149 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.Q.selectBySearch                 : ==>  Preparing: select * from Question order by gmt_create desc limit ?,?
+2020-07-20 13:10:49.150 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.Q.selectBySearch                 : ==> Parameters: 0(Integer), 5(Integer)
+2020-07-20 13:10:49.156 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.Q.selectBySearch                 : <==      Total: 5
+2020-07-20 13:10:49.157 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ?
+2020-07-20 13:10:49.158 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 59(Long)
+2020-07-20 13:10:49.160 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-20 13:10:49.172 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ?
+2020-07-20 13:10:49.172 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 59(Long)
+2020-07-20 13:10:49.173 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-20 13:10:49.174 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ?
+2020-07-20 13:10:49.175 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 59(Long)
+2020-07-20 13:10:49.176 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-20 13:10:49.177 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ?
+2020-07-20 13:10:49.177 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 59(Long)
+2020-07-20 13:10:49.179 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-20 13:10:49.179 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ?
+2020-07-20 13:10:49.180 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 59(Long)
+2020-07-20 13:10:49.181 DEBUG 24000 --- [http-nio-8080-exec-1] c.i.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-07-20 13:12:04.562  INFO 31732 --- [restartedMain] com.it.community.CommunityApplication    : Starting CommunityApplication on tong with PID 31732 (D:\IDEA_SPACE\community\target\classes started by tong in D:\IDEA_SPACE\community)
+2020-07-20 13:12:04.571  INFO 31732 --- [restartedMain] com.it.community.CommunityApplication    : No active profile set, falling back to default profiles: default
+2020-07-20 13:12:04.806  INFO 31732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-20 13:12:04.806  INFO 31732 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-20 13:12:08.353  INFO 31732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-07-20 13:12:08.384  INFO 31732 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-20 13:12:08.385  INFO 31732 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-20 13:12:08.589  INFO 31732 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-20 13:12:08.591  INFO 31732 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3784 ms
+2020-07-20 13:12:09.745  INFO 31732 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-20 13:12:09.861  INFO 31732 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-07-20 13:12:10.473  INFO 31732 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-20 13:12:10.545  INFO 31732 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-20 13:12:10.566  INFO 31732 --- [restartedMain] com.it.community.CommunityApplication    : Started CommunityApplication in 6.917 seconds (JVM running for 8.922)
